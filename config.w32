@@ -1,0 +1,13 @@
+ARG_ENABLE("handlersocketi", "enable handlersocketi support", "no");
+
+if (PHP_HANDLERSOCKETI != "no") {
+   handlersocketi_source =
+     "handlersocketi.c " +
+     "handlersocketi_exception.c " +
+     "handlersocketi_class.c " +
+     "handlersocketi_index.c " +
+     "util/request.c " +
+     "util/response.c";
+   EXTENSION("handlersocketi", handlersocketi_source);
+   PHP_INSTALL_HEADERS("ext/handlersocketi/", "php_handlersocketi.h handlersocketi_exception.h handlersocketi_class.h handlersocketi_index.h");
+}
