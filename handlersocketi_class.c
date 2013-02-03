@@ -4,6 +4,7 @@
 #include "php_streams.h"
 #include "ext/standard/php_smart_str.h"
 
+#include "php_verdep.h"
 #include "php_handlersocketi.h"
 #include "handlersocketi_exception.h"
 #include "handlersocketi_class.h"

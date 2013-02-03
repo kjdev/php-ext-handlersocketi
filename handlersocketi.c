@@ -7,6 +7,7 @@
 #include "php_ini.h"
 #include "ext/standard/info.h"
 
+#include "php_verdep.h"
 #include "php_handlersocketi.h"
 #include "handlersocketi_exception.h"
 #include "handlersocketi_class.h"
