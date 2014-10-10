@@ -154,6 +154,7 @@ hs_object_connection(hs_obj_t *obj)
     char *errstr = NULL;
     int err;
     struct timeval tv;
+    TSRMLS_FETCH();
 
     if (obj->timeout > 0) {
         tv.tv_sec = obj->timeout;
@@ -271,6 +272,7 @@ PHP_HANDLERSOCKETI_API php_stream
 *handlersocketi_object_store_get_stream(zval *link)
 {
     hs_obj_t *hs;
+    TSRMLS_FETCH();
 
     hs = (hs_obj_t *)zend_object_store_get_object(link TSRMLS_CC);
     if (hs) {
@@ -284,6 +286,7 @@ PHP_HANDLERSOCKETI_API long
 handlersocketi_object_store_get_timeout(zval *link)
 {
     hs_obj_t *hs;
+    TSRMLS_FETCH();
 
     hs = (hs_obj_t *)zend_object_store_get_object(link TSRMLS_CC);
     if (hs) {
