@@ -66,6 +66,7 @@ hs_response_recv(php_stream *stream, char *recv, size_t size TSRMLS_DC)
     if (ret <= 0) {
         return -1;
     }
+    recv[size] = '\0';
 
 #ifdef HS_DEBUG
     for (i = 0; i < ret; i++) {
